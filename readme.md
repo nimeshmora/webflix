@@ -11,4 +11,5 @@
 2. Copy `.env.example` to `.env` and modify the values to match your environment
 3. Run `composer install` to install dependencies
 4. Run `php artisan key:generate` to set an Encryption Key
+5. Run `php artisan migrate --seed` to migrate the database and seed it with movies and a user
 5. Run `php artisan serve` to serve the application using a built-in PHP server or serve the application using [Homestead](https://laravel.com/docs/5.4/homestead)

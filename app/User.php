@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Movie;
 
 class User extends Authenticatable
 {
@@ -26,4 +27,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Returns all movies that this user has watched.
+     *
+     * @return [type] [description]
+     */
+    public function movies_watched()
+    {
+        return $this->belongsToMany(Movie::class, 'user_watched_movies');
+    }
 }
