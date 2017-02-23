@@ -13,3 +13,8 @@
 4. Run `php artisan key:generate` to set an Encryption Key
 5. Run `php artisan migrate --seed` to migrate the database and seed it with movies and a user
 5. Run `php artisan serve` to serve the application using a built-in PHP server or serve the application using [Homestead](https://laravel.com/docs/5.4/homestead)
+
+## Credentials
+
+Username: `test@test.com`
+Password: `secret`
