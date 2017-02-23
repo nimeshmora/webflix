@@ -18,4 +18,30 @@ class HomeController extends Controller
 
         return view('home')->with(compact('movies'));
     }
+
+    /**
+     * Mark movie watched.
+     *
+     * @param  Movie  $movie [description]
+     * @return [type]        [description]
+     */
+    public function watch(Movie $movie)
+    {
+        auth()->user()->movies_watched()->attach($movie);
+
+        return redirect()->to('/');
+    }
+
+    /**
+     * Mark movie not watched.
+     * 
+     * @param  Movie  $movie [description]
+     * @return [type]        [description]
+     */
+    public function unwatch(Movie $movie)
+    {
+        auth()->user()->movies_watched()->detach($movie);
+
+        return redirect()->to('/');
+    }
 }

@@ -16,5 +16,5 @@
 
 ## Credentials
 
-Username: `test@test.com`
+Username: `test@test.com`    
 Password: `secret`

@@ -37,4 +37,15 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Movie::class, 'user_watched_movies');
     }
+
+    /**
+     * Returns true if the user has seen the movie, otherwise false.
+     *
+     * @param  Movie   $movie [description]
+     * @return boolean        [description]
+     */
+    public function hasSeen(Movie $movie)
+    {
+        return $this->movies_watched()->where('id', $movie->id)->exists();
+    }
 }

@@ -16,9 +16,15 @@
                                 <li class="list-group-item">Release date: {{ $movie->released_at->format('d.m.Y') }}</li>
                             </ul>
                             @if (Auth::check())
-                                <div class="card-block">
-                                    <a href="#" class="card-link">Mark as watched</a>
-                                </div>
+                                @if(Auth::user()->hasSeen($movie))
+                                    <div class="card-block">
+                                        <a href="{{ route('movies.unwatch', $movie->id) }}" class="card-link">Mark as not watched</a>
+                                    </div>
+                                @else
+                                    <div class="card-block">
+                                        <a href="{{ route('movies.watch', $movie->id) }}" class="card-link">Mark as watched</a>
+                                    </div>
+                                @endif
                             @endif
                         </div>
                     </div>
