@@ -22,7 +22,7 @@ Password: `secret`
 
 ## Testing
 
-The application uses Codeception for testing. You can run tests with the following command:
+The application uses [Codeception](http://codeception.com/) for testing. You can run tests with the following command:
 
 ```
 vendor/bin/codecept run functional
