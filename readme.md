@@ -4,6 +4,7 @@
 
 > This application is used for creating tutorials on how to deploy a Laravel application from GitHub to Heroku using Codeship for continuous integration and deployment.
 
+![Home page](home.png)
 
 ## Installation
 
@@ -14,7 +15,17 @@
 5. Run `php artisan migrate --seed` to migrate the database and seed it with movies and a user
 5. Run `php artisan serve` to serve the application using a built-in PHP server or serve the application using [Homestead](https://laravel.com/docs/5.4/homestead)
 
-## Credentials
+## Login credentials
 
-Username: `test@test.com`    
+Email: `test@test.com`    
 Password: `secret`
+
+## Testing
+
+The application uses Codeception for testing. You can run tests with the following command:
+
+```
+vendor/bin/codecept run functional
+```
+
+See `.env.testing` for testing environment configuration. Tests are located in `tests/functional` directory.
