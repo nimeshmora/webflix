@@ -1,5 +1,16 @@
 <?php
 
+// Break down Heroku database URL
+if(!is_null(env('DATABASE_URL')))
+{
+    $url = parse_url(env("DATABASE_URL"));
+
+    $host = $url["host"];
+    $username = $url["user"];
+    $password = $url["pass"];
+    $database = substr($url["path"], 1);
+}
+
 return [
 
     /*
@@ -73,6 +84,19 @@ return [
             'database' => 'development',
             'username' => env('PGUSER'),
             'password' => env('PGPASSWORD'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
+        'pgsql_heroku' => [
+            'driver' => 'pgsql',
+            'host' => $host,
+            'port' => 5432,
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
