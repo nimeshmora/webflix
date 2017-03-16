@@ -29,3 +29,7 @@ vendor/bin/codecept run functional
 ```
 
 See `.env.testing` for testing environment configuration. Tests are located in `tests/functional` directory.
+
+---
+
+Continuous deployment
