@@ -1,5 +1,10 @@
 <?php
 
+$host = null;
+$username = null;
+$password = null;
+$database = null;
+
 // Break down Heroku database URL
 if(!is_null(env('DATABASE_URL')))
 {
