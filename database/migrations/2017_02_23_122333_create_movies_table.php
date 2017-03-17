@@ -31,8 +31,14 @@ class CreateMoviesTable extends Migration
             $table->timestamps();
         });
 
-        // When this migration is completed, seed the database.
-        \Artisan::call('db:seed');
+        // When this migration is completed, seed the database
+        // if the environment equals `production`.
+        if(\App::environment('production'))
+        {
+            \Artisan::call('db:seed', [
+                '--force' => true
+            ]);
+        }
     }
 
     /**
