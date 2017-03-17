@@ -30,6 +30,9 @@ class CreateMoviesTable extends Migration
             $table->primary(['user_id', 'movie_id']);
             $table->timestamps();
         });
+
+        // When this migration is completed, seed the database.
+        \Artisan::call('db:seed');
     }
 
     /**
