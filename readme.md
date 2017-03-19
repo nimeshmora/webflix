@@ -2,6 +2,8 @@
 
 **Webflix is dummy Laravel application which simulates Netflix. You can log in, browse movies and mark movies watched.**
 
+[Demo](http://webflix-laravelista.herokuapp.com/)
+
 > This application is used for creating tutorials on how to deploy a Laravel application from GitHub to Heroku using Codeship for continuous integration and deployment.
 
 ![Home page](home.png)
@@ -29,7 +31,3 @@ vendor/bin/codecept run functional
 ```
 
 See `.env.testing` for testing environment configuration. Tests are located in `tests/functional` directory.
-
----
-
-Continuous deployment 2
