@@ -2,9 +2,9 @@
 
 **Webflix is dummy Laravel application which simulates Netflix. You can log in, browse movies and mark movies watched.**
 
-[Demo](http://webflix-laravelista.herokuapp.com/)
-
 > This application is used for creating tutorials on how to deploy a Laravel application from GitHub to Heroku using Codeship for continuous integration and deployment.
+
+[Demo](http://webflix-laravelista.herokuapp.com/)
 
 ![Home page](home.png)
 
