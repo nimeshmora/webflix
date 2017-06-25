@@ -44,4 +44,9 @@ class HomeController extends Controller
 
         return redirect()->to('/');
     }
+	
+    public function getRest(){
+	
+    }
+
 }
